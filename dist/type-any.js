@@ -1,4 +1,4 @@
-"use strict";
+/* ######################## Tipo de dato Any ######################## */
 // Declaracion Explicita
 var idUser;
 idUser = 1; // Temporalmente de tipo number hasta que se le asigne otro tipo de valor

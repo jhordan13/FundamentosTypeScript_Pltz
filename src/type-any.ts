@@ -1,3 +1,5 @@
+/* ######################## Tipo de dato Any ######################## */
+
 // Declaracion Explicita
 
 let idUser: any;
