@@ -44,3 +44,24 @@ let createPic = (title : string , date : string , size : BoxSize) : object => {
 
 const picture = createPic("Pltazi class", "2021-09-10","1000x1000");
 console.log("picture : ",picture);
+
+// Tipo de retorno con TypeScript
+
+function HandleError(code : number, message : string) : never | string {
+
+  // Procesamiento del codigo lenguaje
+  if(message == "error"){
+    throw new Error(`${message}. Codigo de error : ${code}`);
+  }else{
+    return "Un error ha ocurrido";
+  }
+}
+
+try {
+  let result = HandleError(200,"Ok");    // Retorna string
+  console.log("result : ",result);
+  result = HandleError(404,"error"); //Retorna never que hace referencia a lanzar un error
+  console.log("result : ",result);
+} catch (error) {
+  
+}
