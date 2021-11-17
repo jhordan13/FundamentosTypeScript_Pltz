@@ -6,18 +6,22 @@ function showInfo(user) {
 showInfo({ id: 1, username: "jordan13", firstName: "Jordan" });
 // Declaracion Implicita
 function ShowFormatedInfo(user) {
-    console.log("User info: ", "\n    id: " + user.id + "\n    username: " + user.username + "\n    firstName: " + user.firstName + "\n  ");
+    console.log("User info: ", `
+    id: ${user.id}
+    username: ${user.username}
+    firstName: ${user.firstName}
+  `);
 }
 ShowFormatedInfo({ id: 1, username: "jordan13", firstName: "Jordan" });
 // #### Tipo void como tipo de variable ####
-var unusable;
+let unusable;
 unusable = null; // De forma predeterminada esta asignacion es un error y para arreglar esto debemos configurar el archivo "tsconfig.json" con '"stric": false'
 unusable = undefined;
 /* ######################## Tipo de dato Never ######################## */
 function handleError(code, message) {
     // Procesamos el codigo aqui
     // Generamos un mensaje
-    throw new Error(message + ". Code : " + code);
+    throw new Error(`${message}. Code : ${code}`);
 }
 // Necesitamos definir un try cath para la correcta gestion de nuestra funcion
 try {
@@ -27,7 +31,7 @@ catch (error) {
 }
 // Por ser un bucle infinito le indicamos al compilador de typescript que no terminara de ejecutarse y nunca devolvera algo 
 function sumNumbers(limit) {
-    var sum = 0;
+    let sum = 0;
     while (true) {
         sum++;
     }

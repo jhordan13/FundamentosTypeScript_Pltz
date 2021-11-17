@@ -2,15 +2,15 @@
 // Son mecanismos de conversión de tipos de datos. Se parece al casting de tipos en otros lenguajes de programación.
 // ####### Sintaxis <> : Angle Bracket syntax ############
 // NOTACION : <type> variable
-var nickname;
+let nickname;
 nickname = "jordan13";
-var message = nickname.length > 5 ? "Bienvenido " + nickname : "Nickname demasiado corto";
+let message = nickname.length > 5 ? `Bienvenido ${nickname}` : `Nickname demasiado corto`;
 console.log("nickname : ", nickname);
 // ####### Sintaxis "as" #########
-var otherMessage = nickname.length > 5 ? "Bienvenido " + nickname : "Nickname demasiado corto";
+let otherMessage = nickname.length > 5 ? `Bienvenido ${nickname}` : `Nickname demasiado corto`;
 console.log("nickname : ", nickname);
-var helloUser = "Hola Jordan";
-var anotherMessage = helloUser.substring(5);
+let helloUser = "Hola Jordan";
+let anotherMessage = helloUser.substring(5);
 console.log("Persona : ", anotherMessage);
 /*
 ! OBS: Diferencia de una Asercion de Tipo (Cast) y la Conversion de un tipo de dato a otro
@@ -30,8 +30,8 @@ let var2 : string = <string>var1; // Muestra un error en tiempo de compilacion y
 let var3 : string = String(var1); // Conversion correcta
 */
 // Ejemplo 2 : No es posible castear un "any" que almacena un valor "number" hacia un "string", ya que devolvera "undefined"
-var dni = 73436473;
-var castDni = dni; // Muestra un error en tiempo de ejecucion mas no de compilacion
-var convertDni = String(dni); // Conversion correcta
+let dni = 73436473;
+let castDni = dni; // Muestra un error en tiempo de ejecucion mas no de compilacion
+let convertDni = String(dni); // Conversion correcta
 console.log(castDni.length); //Output : Undefined
 console.log(convertDni.length); //Output : 8

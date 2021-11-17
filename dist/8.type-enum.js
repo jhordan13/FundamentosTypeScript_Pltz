@@ -1,15 +1,4 @@
 /* ######################## Tipo de dato Enum ######################## */
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 // ######### Enum para valores numericos ###############
 // Asociamos claves(keys) a una enumeracion de que inicia en 3
 // OBS: Si no definimos un valor inicial toma 0 por defecto
@@ -30,7 +19,7 @@ console.log("Direction[3] : ", Direction[3]);
 console.log("Direction[4] : ", Direction[4]);
 console.log("Direction[5] : ", Direction[5]);
 console.log("Direction[6] : ", Direction[6]);
-var arriba = Direction.Up; // arriba = 3
+const arriba = Direction.Up; // arriba = 3
 console.log("arriba : ", arriba);
 console.log("derecha : ", Direction[arriba]);
 // ######### Enum para valores string ###############
@@ -42,7 +31,7 @@ var Country;
     Country["Peru"] = "per";
     Country["Venezuela"] = "ven";
 })(Country || (Country = {}));
-var country = Country.Peru;
+const country = Country.Peru;
 console.log("country : ", country);
 // ############ Unimos 2 enum en un Objeto ############## 
 var DiasLaborales;
@@ -58,7 +47,7 @@ var DiasFinSemana;
     DiasFinSemana["Sabado"] = "SAT";
     DiasFinSemana["Domingo"] = "SUN";
 })(DiasFinSemana || (DiasFinSemana = {}));
-var Semana = __assign(__assign({}, DiasLaborales), DiasFinSemana);
+const Semana = Object.assign(Object.assign({}, DiasLaborales), DiasFinSemana);
 console.log(Semana.Lunes); // MON
 console.log(Semana.Sabado); // SAT
 // OBS: La manera de extender un enum es simplemente asignando nuevos valores al enum que queremos extender, es decir:

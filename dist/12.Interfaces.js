@@ -19,10 +19,10 @@ var PhotoOrientation;
     PhotoOrientation[PhotoOrientation["Panorama"] = 13] = "Panorama"; // 13
 })(PhotoOrientation || (PhotoOrientation = {}));
 function showPicture(picture) {
-    console.log("[title: " + picture.title + ", date: " + picture.date + ", orientation: " + picture.orientation + "]");
+    console.log(`[title: ${picture.title}, date: ${picture.date}, orientation: ${picture.orientation}]`);
 }
 // Creamos nuestro objeto para pasar como parametro a la funcion
-var myPic = {
+let myPic = {
     title: 'Test title',
     date: '2020-03',
     orientation: PhotoOrientation.Landscape
@@ -31,10 +31,10 @@ showPicture(myPic);
 // Creamos un objeto al momento de declarar la funcion
 showPicture({ title: "Test title", date: "2020-03", orientation: PhotoOrientation.Square });
 function newShowPicture(picture) {
-    console.log("[title: " + picture.title + ", date: " + picture.date + ", orientation: " + picture.orientation + "]");
+    console.log(`[title: ${picture.title}, date: ${picture.date}, orientation: ${picture.orientation}]`);
 }
 // Creamos nuestro objeto para pasar como parametro a la funcion
-var newPic = {
+let newPic = {
     title: 'New title',
     date: '2021-03',
     orientation: PhotoOrientation.Panorama

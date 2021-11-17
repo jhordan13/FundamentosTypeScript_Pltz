@@ -1,6 +1,6 @@
 /* ########### Union de Tipos ############ */
 // La variable puede tomar valores de tipo number o string
-var IdUser;
+let IdUser;
 IdUser = 10;
 IdUser = "10";
 // Buscar username dado un ID
@@ -17,9 +17,9 @@ function getTextById(id) {
 }
 console.log(getTextById(20));
 console.log(getTextById("20"));
-var smallPictures = "100x100";
-var mediumPictures = "500x500";
-var largePictures = "1000x1000";
+let smallPictures = "100x100";
+let mediumPictures = "500x500";
+let largePictures = "1000x1000";
 // let otherPictures : SquareSize = "200x200"; --> Error por no ser un valor definido
 // ###################  Reto Union ########################
 var Sizes;
@@ -30,5 +30,5 @@ var Sizes;
     Sizes["extraLarge"] = "1024x768";
     Sizes["superLarge"] = "3072x2304";
 })(Sizes || (Sizes = {}));
-var newSize = '500x375';
+const newSize = '500x375';
 console.log("newSize : ", newSize);
